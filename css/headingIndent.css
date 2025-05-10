@@ -1,0 +1,67 @@
+
+/* Content headings */
+.content-area h1, 
+.content-area h2, 
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.content-area h1 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.content-area h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.content-area h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.content-area h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.content-area h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.content-area h6 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+
+
+.content-area h1:hover::before,
+.content-area h2:hover::before,
+.content-area h3:hover::before,
+.content-area h4:hover::before,
+.content-area h5:hover::before,
+.content-area h6:hover::before {
+    color: var(--accent);
+    transition: all 01.2s ease;
+    margin-right: 0.25rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.content-area h1:hover::before {content: "#";}
+.content-area h2:hover::before {content: "##";}
+.content-area h3:hover::before {content: "###";}
+.content-area h4:hover::before {content: "####";}
+.content-area h5:hover::before {content: "#####";}
+.content-area h6:hover::before {content: "######";}

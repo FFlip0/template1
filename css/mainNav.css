@@ -1,0 +1,52 @@
+.main-nav {
+    background-color: transparent;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    border-bottom: var(--border);
+}
+
+.nav-left {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home-btn {
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-btn .material-icons {
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+
+
+.home-btn:hover .material-icons {
+    color: var(--accent);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: var(--bg2);
+}
+
+.main-nav a {
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+}

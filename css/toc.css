@@ -1,0 +1,51 @@
+.toc {
+    position: sticky;
+    top: 2rem;    
+    border-left: var(--border);
+    padding: 1rem;
+    max-width: 12rem;
+}
+
+.toc p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-list a {
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    font-size: 0.875rem;
+}
+
+.toc-list a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+.toc-list .toc-h1, .toc-list .toc-h2, .toc-list .toc-h3 {
+    opacity: 1;
+}
+.toc-list .toc-h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.toc-list .toc-h2 {
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+.toc-list .toc-h3 {
+    margin-left: 2rem;
+    font-weight: 400;
+}

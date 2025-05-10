@@ -1,0 +1,134 @@
+:root {
+    --border: 1px solid #444;
+    --border-radius: 5px;
+    --text-color: #ddd;
+    --bg1: #1a1a1a;
+    --bg2: #171717;
+    --bg-accent: #3a3a3a;
+    --accent: #5d99da;
+    --link: #98989F;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg1);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+
+
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.content-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 100%;
+    background-color: transparent;
+    padding: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Truncate long headings */
+.content-area h1,
+.content-area h2,
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/* Sidebar */
+.sidebar-left,
+.sidebar-right {
+    background-color: transparent;
+    /*height: 100%;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-left {
+    border-right: var(--border);
+    background-color: var(--bg2);
+    height: 100%;
+    text-align: right;
+    padding: 1.25rem;
+}
+
+.sidebar-right {
+    opacity: 1;
+}
+
+.sidebar-left h2,
+.sidebar-right h2 {
+    margin-bottom: 1rem;
+}
+
+.sidebar-left nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar-left,
+    .sidebar-right {
+        display: none;
+    }
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sidebar-left {
+        padding-left: 1rem;
+    }
+    .sidebar-right {
+        padding-right: 2rem;
+    }
+}
