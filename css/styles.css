@@ -32,33 +32,35 @@ a:hover {
     color: var(--accent);
 }
 
-
+::-webkit-scrollbar {
+    opacity: 0;
+   }
 
 
 /* Layout */
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr;
     gap: 0;
     margin: 0 auto;
+    max-width: 1400px;
     overflow: hidden;
+    padding: 0 3rem;
 }
 
 .content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 1.5rem;
-    height: 100%;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: space-between;
 }
 
 .content-area {
-    flex-grow: 1;
-    overflow-y: auto;
-    height: 100%;
-    background-color: transparent;
-    padding: 1.25rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    max-width: 800px;
+    padding: 1.25rem 0;
+    width: calc(100% - 18rem);
 }
 
 /* Truncate long headings */
@@ -85,16 +87,28 @@ a:hover {
     flex-direction: column;
 }
 
-.sidebar-left {
-    border-right: var(--border);
-    background-color: var(--bg2);
-    height: 100%;
-    text-align: right;
-    padding: 1.25rem;
-}
+/* Left sidebar removed */
 
 .sidebar-right {
-    opacity: 1;
+    position: sticky;
+    top: 5rem;
+    min-width: 10rem;
+    max-width: 25%;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    padding: 1rem;
+    scrollbar-width: thin;
+    z-index: 100;
+    flex-shrink: 0;
+}
+
+.sidebar-right::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-right::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 2px;
 }
 
 .sidebar-left h2,

@@ -1,15 +1,15 @@
 .toc {
-    position: sticky;
-    top: 2rem;    
+    position: relative;
     border-left: var(--border);
-    padding: 1rem;
-    max-width: 12rem;
+    padding: 0 0 0 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+
 }
 
 .toc p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
+
+    color: var(--accent);
 }
 
 .toc-list {
@@ -28,24 +28,40 @@
 .toc-list a {
     text-decoration: none;
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    margin-left: -1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
 
-.toc-list .toc-h1, .toc-list .toc-h2, .toc-list .toc-h3 {
-    opacity: 1;
+.toc-list a:hover {
+    color: var(--accent);
 }
+
 .toc-list .toc-h1 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
+    margin: 0.5rem 0;
 }
 
 .toc-list .toc-h2 {
     margin-left: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    opacity: 0.9;
 }
 
 .toc-list .toc-h3 {
     margin-left: 2rem;
+    font-size: 0.85rem;
     font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Active TOC item */
+.toc-list a.active {
+    color: var(--accent);
+    font-weight: 600;
 }
